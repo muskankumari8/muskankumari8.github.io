@@ -2,6 +2,9 @@ console.log('Lets write javascript');
 let currentSong = new Audio();
 let songs;
 let currFolder;
+const previous = document.getElementById('previous');
+const next = document.getElementById('next');
+const play = document.getElementById('play');
 
 // Hardcoded playlists and songs
 const playlists = {
@@ -187,29 +190,54 @@ async function main() {
     })
 
 
-    // Add an event listener to previous
-    previous.addEventListener("click", () => {
-        currentSong.pause()
-        console.log("Previous clicked")
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
-        if ((index - 1) >= 0) {
-            playMusic(songs[index - 1])
-        }
-    })
+    // // Add an event listener to previous
+    // previous.addEventListener("click", () => {
+    //     currentSong.pause()
+    //     console.log("Previous clicked")
+    //     let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+    //     if ((index - 1) >= 0) {
+    //         playMusic(songs[index - 1])
+    //     }
+    // })
 
-    // Add an event listener to next
-    next.addEventListener("click", () => {
-        currentSong.pause()
-        console.log("Next clicked")
+    // // Add an event listener to next
+    // next.addEventListener("click", () => {
+    //     currentSong.pause()
+    //     console.log("Next clicked")
 
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
-        if ((index + 1) < songs.length) {
-            playMusic(songs[index + 1])
-        }
-    })
+    //     let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+    //     if ((index + 1) < songs.length) {
+    //         playMusic(songs[index + 1])
+    //     }
+    // })
     
-
+   
+// Add an event listener to previous
+previous.addEventListener("click", () => {
+    currentSong.pause();
+    console.log("Previous clicked");
     
+    let index = songs.indexOf(decodeURIComponent(currentSong.src.split("/").pop())); // Decoding URI and getting the last part of the URL
+    if (index > 0) {
+        playMusic(songs[index - 1]);
+    } else {
+        playMusic(songs[songs.length - 1]); // Loop back to the last song if at the beginning
+    }
+});
+
+// Add an event listener to next
+next.addEventListener("click", () => {
+    currentSong.pause();
+    console.log("Next clicked");
+
+    let index = songs.indexOf(decodeURIComponent(currentSong.src.split("/").pop())); // Decoding URI and getting the last part of the URL
+    if (index < songs.length - 1) {
+        playMusic(songs[index + 1]);
+    } else {
+        playMusic(songs[0]); // Loop back to the first song if at the end
+    }
+});
+
 
 
 
