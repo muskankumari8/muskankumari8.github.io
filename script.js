@@ -9,8 +9,9 @@ const playlists = {
     "mood": ["04 - Kambakkht Ishq - www.downloadming.com.mp3", "Baamulaiza - De Dana Dan 128 Kbps.mp3", "Galat Baat Hai - Main Tera Hero 128 Kbps.mp3"],
     "life": ["Humsafar- Badrinath Ki Dulhania 128 Kbps.mp3", "Isq Risk - Mere Brother Ki Dulhan 128 Kbps.mp3", "Kesariya - Brahmastra 128 Kbps.mp3", "Main Koi Aisa Geet Gaoon - Yes Boss 128 Kbps.mp3", "Tera Hone Laga Hoon - Ajab Prem Ki Ghazab Kahani 128 Kbps.mp3", "Ve Haaniyaan - Avvy Sra 128 Kbps.mp3"],
     "curve": ["Jeena Jeena - Badlapur.mp3", "Mere Bina - Crook.mp3", "Tere Hawaale - Laal Singh Chaddha.mp3", "Tu Hi Mera .mp3", "Tum Mile - Tum MMile.mp3"],
-    "enjoy": ["Dil Tu Jaan Tu - Gurnazar 128 Kbps.mp3", "Kinni Kinni - Ghost (2023) 128 Kbps.mp3", "Tere Bin.mp3", "With You - AP Dhillon 128 Kbps.mp3", "Zaroor - Djjohal.fm.mp3"],
-
+    "enjoy": ["Dil Tu Jaan Tu - Gurnazar 128 Kbps.mp3", "Tere Bin.mp3", "With You - AP Dhillon 128 Kbps.mp3", "Zaroor - Djjohal.fm.mp3"],
+    "sad" : ["Kinni Kinni - Ghost (2023) 128 Kbps.mp3"],
+    "sleep" : []
 };
 
 const playlistInfo = {
@@ -40,9 +41,14 @@ const playlistInfo = {
         cover: "songs/mood/cover.jpg"
     },
     "sad": {
-        title: "Sad Playlist",
+        title: "Relax",
         description: "Songs for you",
         cover: "songs/sad/cover.jpg"
+    },
+    "sleep": {
+        title: "Sleep",
+        description: "Songs for you",
+        cover: "songs/sleep/cover.jpg"
     }
 };
 
@@ -138,7 +144,7 @@ async function main() {
 
 
     //get the list of all songs
-    getSongs("mood");
+    getSongs("curve");
     playMusic(songs[0], true);
 
     // Display all the albums on the page
@@ -201,6 +207,13 @@ async function main() {
             playMusic(songs[index + 1])
         }
     })
+    
+
+    
+
+
+
+    
 
     // Add an event to volume
     document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e) => {

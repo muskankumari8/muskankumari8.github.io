@@ -67,6 +67,44 @@
     .login-container a:hover {
         text-decoration: underline;
     }
+    @media (max-width: 500px) {
+        .login-container {
+            padding: 20px;
+        }
+
+        .login-container form {
+            margin-bottom: 10px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            margin: 5px 0;
+        }
+
+        .login-container input[type="submit"] {
+            padding: 10px 15px;
+        }
+    }
+
+    /* Media Query for screens up to and including 1200px */
+    @media (max-width: 1200px) {
+        .login-container {
+            padding: 30px;
+        }
+
+        .login-container form {
+            margin-bottom: 15px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            margin: 7px 0;
+        }
+
+        .login-container input[type="submit"] {
+            padding: 12px 18px;
+        }
+    }
 </style>
 </head>
 <body>

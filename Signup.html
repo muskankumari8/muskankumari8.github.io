@@ -68,6 +68,46 @@
     .signup-container a:hover {
         text-decoration: underline;
     }
+    @media (max-width: 500px) {
+        .signup-container {
+            padding: 20px;
+        }
+
+        .signup-container form {
+            margin-bottom: 10px;
+        }
+
+        .signup-container input[type="text"],
+        .signup-container input[type="email"],
+        .signup-container input[type="password"] {
+            margin: 5px 0;
+        }
+
+        .signup-container input[type="submit"] {
+            padding: 10px 15px;
+        }
+    }
+
+    /* Media Query for screens up to and including 1200px */
+    @media (max-width: 1200px) {
+        .signup-container {
+            padding: 30px;
+        }
+
+        .signup-container form {
+            margin-bottom: 15px;
+        }
+
+        .signup-container input[type="text"],
+        .signup-container input[type="email"],
+        .signup-container input[type="password"] {
+            margin: 7px 0;
+        }
+
+        .signup-container input[type="submit"] {
+            padding: 12px 18px;
+        }
+    }
 </style>
 </head>
 <body>
