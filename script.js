@@ -6,12 +6,12 @@ let currFolder;
 // Hardcoded playlists and songs
 const playlists = {
     "happy": ["song1.mp3", "song2.mp3", "song3.mp3", "song4.mp3"],
-    "mood": ["04 - Kambakkht Ishq - www.downloadming.com.mp3", "Baamulaiza - De Dana Dan 128 Kbps.mp3", "Galat Baat Hai - Main Tera Hero 128 Kbps.mp3"],
+    "mood": ["04 - Kambakkht Ishq - www.downloadming.com.mp3", "Galat Baat Hai - Main Tera Hero 128 Kbps.mp3"],
     "life": ["Humsafar- Badrinath Ki Dulhania 128 Kbps.mp3", "Isq Risk - Mere Brother Ki Dulhan 128 Kbps.mp3", "Kesariya - Brahmastra 128 Kbps.mp3", "Main Koi Aisa Geet Gaoon - Yes Boss 128 Kbps.mp3", "Tera Hone Laga Hoon - Ajab Prem Ki Ghazab Kahani 128 Kbps.mp3", "Ve Haaniyaan - Avvy Sra 128 Kbps.mp3"],
     "curve": ["Jeena Jeena - Badlapur.mp3", "Mere Bina - Crook.mp3", "Tere Hawaale - Laal Singh Chaddha.mp3", "Tu Hi Mera .mp3", "Tum Mile - Tum MMile.mp3"],
     "enjoy": ["Dil Tu Jaan Tu - Gurnazar 128 Kbps.mp3", "Tere Bin.mp3", "With You - AP Dhillon 128 Kbps.mp3", "Zaroor - Djjohal.fm.mp3"],
     "sad" : ["Kinni Kinni - Ghost (2023) 128 Kbps.mp3"],
-    "sleep" : []
+    "sleep" : ["Baamulaiza - De Dana Dan 128 Kbps.mp3"]
 };
 
 const playlistInfo = {
@@ -98,7 +98,7 @@ async function getSongs(folder) {
 }
 
 function playMusic(track, pause = false) {
-    currentSong.src = `https://raw.githubusercontent.com/mo-sahill/mo-sahill.github.io/main/spotify/songs/${currFolder}/` + track;
+    currentSong.src = `https://raw.githubusercontent.com/muskankumari8/muskankumari8.github.io/main/songs/${currFolder}/` + track;
     if (!pause) {
         currentSong.play();
         play.src = "images/pause (1).svg";
