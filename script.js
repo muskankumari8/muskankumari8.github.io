@@ -5,7 +5,7 @@ let currFolder;
 
 // Hardcoded playlists and songs
 const playlists = {
-    "happy": ["Asal Mein.mp3", "song2.mp3", "song3.mp3", "song4.mp3"],
+    "happy": ["Asal Mein.mp3", "Saari Ki Saari.mp3", "Bhula Diya.mp3", "Tera Zikr.mp3"],
     "mood": ["04 - Kambakkht Ishq - www.downloadming.com.mp3", "Galat Baat Hai - Main Tera Hero 128 Kbps.mp3"],
     "life": ["Humsafar- Badrinath Ki Dulhania 128 Kbps.mp3", "Isq Risk - Mere Brother Ki Dulhan 128 Kbps.mp3", "Kesariya - Brahmastra 128 Kbps.mp3", "Main Koi Aisa Geet Gaoon - Yes Boss 128 Kbps.mp3", "Tera Hone Laga Hoon - Ajab Prem Ki Ghazab Kahani 128 Kbps.mp3", "Ve Haaniyaan - Avvy Sra 128 Kbps.mp3"],
     "curve": ["Jeena Jeena - Badlapur.mp3", "Mere Bina - Crook.mp3", "Tere Hawaale - Laal Singh Chaddha.mp3", "Tu Hi Mera .mp3", "Tum Mile - Tum MMile.mp3"],
